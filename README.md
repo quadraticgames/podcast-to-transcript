@@ -10,9 +10,17 @@ A simple web application that converts podcast audio files into clean, easy-to-r
 - 💾 Download as markdown file
 - 📱 Works on both computers and mobile devices
 
+<!-- 
+  SCREENSHOT INSTRUCTIONS:
+  1. Upload screenshot.png to your repository root
+  2. Right-click the uploaded image in GitHub and copy its URL
+  3. Replace the URL below with the copied URL
+-->
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/your_username/your_repo_id/screenshot.png" alt="Podcast to Transcript Screenshot" width="800"/>
+  <img src="screenshot.png" alt="Podcast to Transcript Screenshot" width="800"/>
 </div>
+
+> **Note**: After uploading the screenshot to your repository, update the image URL above if needed.
 
 ## 🚀 Quick Start Guide (For Everyone!)
 
