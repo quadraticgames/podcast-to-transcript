@@ -16,8 +16,7 @@ A simple web application that converts podcast audio files into clean, easy-to-r
   2. Right-click the uploaded image in GitHub and copy its URL
   3. Replace the URL below with the copied URL
 -->
-![alt text](screenshot.png)
-<!-- cache-bust -->
+![Podcast to Transcript Application Screenshot](https://raw.githubusercontent.com/quadraticgames/podcast-to-transcript/master/screenshot.png)
 
 ## 🚀 Quick Start Guide (For Everyone!)
 
