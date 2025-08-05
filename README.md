@@ -17,7 +17,7 @@ A simple web application that converts podcast audio files into clean, easy-to-r
   3. Replace the URL below with the copied URL
 -->
 <div align="center">
-  <img src="screenshot.png" alt="Podcast to Transcript Screenshot" width="800"/>
+  <img src="https://raw.githubusercontent.com/quadr/podcast-to-transcript/master/screenshot.png" alt="Podcast to Transcript Screenshot" width="800"/>
 </div>
 
 > **Note**: After uploading the screenshot to your repository, update the image URL above if needed.
