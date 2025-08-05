@@ -10,7 +10,9 @@ A simple web application that converts podcast audio files into clean, easy-to-r
 - 💾 Download as markdown file
 - 📱 Works on both computers and mobile devices
 
-![Podcast to Transcript Screenshot](https://github.com/quadraticgames/podcast-to-transcript/master/screenshot.png)
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/your_username/your_repo_id/screenshot.png" alt="Podcast to Transcript Screenshot" width="800"/>
+</div>
 
 ## 🚀 Quick Start Guide (For Everyone!)
 
