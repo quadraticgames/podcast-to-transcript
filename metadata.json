@@ -1,0 +1,5 @@
+{
+  "name": "Podcast to Transcript",
+  "description": "A simple application to upload an MP3 podcast file and convert it into a formatted text transcript using the Gemini API.",
+  "requestFramePermissions": []
+}
