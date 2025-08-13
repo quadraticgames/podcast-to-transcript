@@ -46,8 +46,9 @@ A simple web application that converts podcast audio files into clean, easy-to-r
 5. Name it exactly: `.env.local` (including the dot at the beginning)
 6. Open the file and paste this line, replacing `your_api_key_here` with the key you got from Google:
    ```
-   VITE_GEMINI_API_KEY=your_api_key_here
+   GEMINI_API_KEY=your_api_key_here
    ```
+   Note: `VITE_GEMINI_API_KEY` also works; the app reads either.
 7. Save the file
 
 ### Step 5: Run the Application
@@ -96,9 +97,10 @@ podcast-to-transcript/
 
 All configuration is done through environment variables in the `.env.local` file:
 
-| Variable           | Description                           | Required |
-|--------------------|---------------------------------------|----------|
-| VITE_GEMINI_API_KEY | Your Google Gemini API key           | Yes      |
+| Variable                      | Description                           | Required |
+|-------------------------------|---------------------------------------|----------|
+| GEMINI_API_KEY                | Your Google Gemini API key            | Yes      |
+| VITE_GEMINI_API_KEY (optional)| Alternative name also supported       | No       |
 
 ## Contributing
 
