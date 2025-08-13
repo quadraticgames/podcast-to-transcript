@@ -33,6 +33,12 @@ const App: React.FC = () => {
       return;
     }
 
+    if (!import.meta.env.VITE_GEMINI_API_KEY) {
+      setErrorMessage('An API Key must be set when running in a browser');
+      setStatus(AppStatus.ERROR);
+      return;
+    }
+
     setStatus(AppStatus.LOADING);
     setErrorMessage('');
     setTranscript('');

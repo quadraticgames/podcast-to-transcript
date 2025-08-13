@@ -15,11 +15,12 @@ const fileToBase64 = (file: File): Promise<string> => {
 };
 
 export const transcribeAudio = async (audioFile: File): Promise<string> => {
-  if (!process.env.API_KEY) {
-    throw new Error("The API_KEY environment variable is not set.");
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  if (!apiKey) {
+    throw new Error("The VITE_GEMINI_API_KEY environment variable is not set.");
   }
 
-  const ai = new GoogleGenAI(process.env.API_KEY);
+  const genAI = new GoogleGenAI({ apiKey });
 
   try {
     const base64Audio = await fileToBase64(audioFile);
@@ -35,15 +36,12 @@ export const transcribeAudio = async (audioFile: File): Promise<string> => {
       text: "You are an expert audio transcriptionist. Please transcribe the following podcast audio. The output should be a clean, readable text transcript. Identify different speakers if possible (e.g., Speaker 1:, Speaker 2:). Format the transcript into paragraphs for better readability. Do not include any of your own commentary, just provide the raw transcript.",
     };
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: { parts: [textPart, audioPart] },
-      config: {
-        temperature: 0.2
-      }
+    const result = await genAI.models.generateContent({
+      model: 'gemini-1.5-flash',
+      contents: [{ parts: [textPart, audioPart] }],
     });
 
-    let transcript = response.text;
+    const transcript = result.response.text();
 
     // Check for multiple speakers. The regex looks for "Speaker 2:", "Speaker 3:", etc.
     const hasMultipleSpeakers = /speaker [2-9]:/i.test(transcript) || /speaker \d{2,}:/i.test(transcript);
