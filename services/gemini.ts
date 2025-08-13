@@ -19,7 +19,7 @@ export const transcribeAudio = async (audioFile: File): Promise<string> => {
     throw new Error("The API_KEY environment variable is not set.");
   }
 
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI(process.env.API_KEY);
 
   try {
     const base64Audio = await fileToBase64(audioFile);
